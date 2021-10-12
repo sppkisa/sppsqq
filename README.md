@@ -38,9 +38,9 @@
 - [ConcurrentHashMap 的实现原理](https://github.com/crossoverJie/JCSprout/blob/master/MD/ConcurrentHashMap.md)
 - [如何优雅的使用和理解线程池](https://github.com/crossoverJie/JCSprout/blob/master/MD/ThreadPoolExecutor.md)
 - [深入理解线程通信](https://github.com/crossoverJie/JCSprout/blob/master/MD/concurrent/thread-communication.md)
-- [一个线程罢工的诡异事件](docs/thread/thread-gone.md)
-- [线程池中你不容错过的一些细节](docs/thread/thread-gone2.md)
-- [『并发包入坑指北』之阻塞队列](docs/thread/ArrayBlockingQueue.md)
+- [一个线程罢工的诡异事件](docs/java/thread/thread-gone.md)
+- [线程池中你不容错过的一些细节](docs/java/thread/thread-gone2.md)
+- [『并发包入坑指北』之阻塞队列](docs/java/thread/ArrayBlockingQueue.md)
 
 ### JVM
 - [Java 运行时内存划分](https://github.com/crossoverJie/JCSprout/blob/master/MD/MemoryAllocation.md)
@@ -50,8 +50,8 @@
 - [对象的创建与内存分配](https://github.com/crossoverJie/JCSprout/blob/master/MD/newObject.md)
 - [你应该知道的 volatile 关键字](https://github.com/crossoverJie/JCSprout/blob/master/MD/concurrent/volatile.md)
 - [一次内存溢出排查优化实战](https://crossoverjie.top/2018/08/29/java-senior/OOM-Disruptor/)
-- [一次 HashSet 所引起的并发问题](docs/jvm/JVM-concurrent-HashSet-problem.md)
-- [一次生产 CPU 100% 排查优化实践](docs/jvm/cpu-percent-100.md)
+- [一次 HashSet 所引起的并发问题](docs/java/jvm/JVM-concurrent-HashSet-problem.md)
+- [一次生产 CPU 100% 排查优化实践](docs/java/jvm/cpu-percent-100.md)
 
 ### 分布式相关
 
@@ -80,7 +80,7 @@
 - [MySQL 索引原理](https://github.com/crossoverJie/JCSprout/blob/master/MD/MySQL-Index.md)
 - [SQL 优化](https://github.com/crossoverJie/JCSprout/blob/master/MD/SQL-optimization.md)
 - [数据库水平垂直拆分](https://github.com/crossoverJie/JCSprout/blob/master/MD/DB-split.md)
-- [一次分表踩坑实践的探讨](docs/db/sharding-db.md)
+- [一次分表踩坑实践的探讨](docs/java/db/sharding-db.md)
 
 ### 数据结构与算法
 - [红包算法](https://github.com/crossoverJie/JCSprout/blob/master/src/main/java/com/crossoverjie/red/RedPacket.java)

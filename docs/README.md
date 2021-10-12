@@ -3,7 +3,7 @@
 <div align="center">  
 
 
-[![Build Status](https://travis-ci.org/crossoverJie/JCSprout.svg?branch=master)](https://travis-ci.org/crossoverJie/JCSprout)
+[![Build Status](https://travis-ci.org/crossoverJie/JCSprout.svg?branch=master)](https://github.com/sppkisa/siyue)
 
 
 <br>

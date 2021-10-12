@@ -19,6 +19,15 @@
   - [一个线程罢工的诡异事件](java/thread/thread-gone.md)
   - [线程池中你不容错过的一些细节](java/thread/thread-gone2.md)
   - [『并发包入坑指北』之阻塞队列](java/thread/ArrayBlockingQueue.md)
+  
+- 数据结构与算法
+
+  - [常见算法](algorithm/common-algorithm.md)
+  - [一致性 Hash 算法原理](algorithm/Consistent-Hash.md)
+  - [一致性 Hash 算法实践](algorithm/consistent-hash-implement.md)
+  - [限流算法](algorithm/Limiting.md)
+  - [动手实现一个 LRU cache](algorithm/LRU-cache.md)
+  - [亿级数据中判断数据是否不存在](algorithm/guava-bloom-filter.md)
 
 - JVM
 
