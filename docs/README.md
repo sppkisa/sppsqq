@@ -1,4 +1,4 @@
-# Introduction
+# 前言
 
 <div align="center">  
 
@@ -9,7 +9,7 @@
 <br>
 
 
-`Java Core Sprout`：处于萌芽阶段的 `Java` 核心知识库。
+`四月小记`：处于萌芽阶段的 `Java` 核心知识库。
 
 <br/>
 

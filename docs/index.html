@@ -9,72 +9,130 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
     <link rel="shortcut icon" href="word.ico">
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
 </head>
 <body>
-<div id="app"></div>
-<script>
-    window.$docsify = {
-        name: '四月小记',
-        repo: 'https://github.com/sppkisa/siyue',
-        loadSidebar: true,
-        loadNavbar: true,
-        coverpage: true,
-        subMaxLevel: 3,
-        maxLevel: 4,
-        ga: 'UA-128791327-1',
 
-        search: {
-            noData: {
-                '/': 'No results!'
+<div id="app">
+    <h1>HJKGAHKJFHAJIKAKJ</h1>
+    <script>
+        window.$docsify = {
+            name: '四月小记',
+            repo: 'https://github.com/sppkisa/siyue',
+            loadSidebar: true,
+            loadNavbar: true,
+            coverpage: true,
+            subMaxLevel: 3,
+            maxLevel: 4,
+            ext: '.md',
+            ga: 'UA-128791327-1',
+
+            search: {
+                noData: {
+                    '/': 'No results!'
+                },
+                paths: 'auto',
+                placeholder: {
+                    '/': 'Search'
+                }
             },
-            paths: 'auto',
-            placeholder: {
-                '/': 'Search'
-            }
-        },
 
-    };
-</script>
-<script src="./lib/docsify.min.js"></script>
-<script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
-<script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
-<script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
-<script>
-    const RSS_URL = `http://feed.cnblogs.com/q/`;
+        };
+    </script>
+    <script src="./lib/docsify.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
+    <script>
+        const RSS_URL = `https://sspai.com/feed`;
+        let pattern_title = /<title>(.*)<\/title>/i;
+        let pattern_author = /<author>(.*)<\/author>/i;
+        let pattern_time = /<pubDate>(.*)<\/pubDate>/i;
+        let pattern_content = /<description>(.*)<\/description>/i;
+        let pattern_link = /<link>(.*)<\/link>/i;
+        $(function () {
+            $('.cover-main').html('<img src="_media/image.png"  width="473" />');
+            $('.cover-main').append(`<br/><a href="https://github.com/sppkisa/siyue" style="font-family: Source Sans Pro,Helvetica Neue,Arial,sans-serif;
+                                                                                        text-align: center;
+                                                                                        line-height: 1.5rem;
+                                                                                        -webkit-font-smoothing: antialiased;
+                                                                                        -webkit-tap-highlight-color: rgba(0,0,0,0);
+                                                                                        -webkit-text-size-adjust: none;
+                                                                                        border-radius: 2rem;
+                                                                                        border: 1px solid #42b983;
+                                                                                        box-sizing: border-box;
+                                                                                        color: #42b983;
+                                                                                        display: inline-block;
+                                                                                        font-size: 1.05rem;
+                                                                                        letter-spacing: .1rem;
+                                                                                        margin: .5rem 1rem;
+                                                                                        padding: .75em 2rem;
+                                                                                        text-decoration: none;
+                                                                                        transition: all .15s ease;
+                                                                                        target="_blank">GitHub</a>`);
+            $('.cover-main').append(`<a href="/#/java/" style="font-family: Source Sans Pro,Helvetica Neue,Arial,sans-serif;
+                                                                                        text-align: center;
+                                                                                        line-height: 1.5rem;
+                                                                                        -webkit-font-smoothing: antialiased;
+                                                                                        -webkit-tap-highlight-color: rgba(0,0,0,0);
+                                                                                        -webkit-text-size-adjust: none;
+                                                                                        border-radius: 2rem;
+                                                                                        border: 1px solid #42b983;
+                                                                                        box-sizing: border-box;
+                                                                                        display: inline-block;
+                                                                                        font-size: 1.05rem;
+                                                                                        letter-spacing: .1rem;
+                                                                                        margin: .5rem 1rem;
+                                                                                        padding: .75em 2rem;
+                                                                                        text-decoration: none;
+                                                                                        transition: all .15s ease;
+                                                                                        background-color: #42b983;
+                                                                                        color: #fff;
+                                                                                        target="_blank">Get Started</a>`);
 
-    $.ajax(RSS_URL, {
-        accepts: {
-            xml: 'application/rss+xml'
-        },
+            $('.cover-main').append('<hr/><br/>');
 
-        dataType: 'xml',
-
-        success: function (data) {
-            console.log("访问少数派RSS订阅成功！！！！"+data);
-            $(data)
-                .find('item')
-                .each(function () {
-                    const el = $(this);
-
-                    const template = `
-                          <article>
-                            <img src="${el.find('link').text()}/image/large.png" alt="">
-                            <h2>
-                              <a href="${el
-                                        .find('link')
-                                        .text()}" target="_blank" rel="noopener">
-                                ${el.find('title').text()}
-                              </a>
-                            </h2>
-                          </article>
-                                    `;
-
-                    document.body.insertAdjacentHTML('beforeend', template);
-                });
-        }
-    });
-</script>
+            $.ajax({
+                url: RSS_URL,
+                type: 'GET',
+                // dataType: 'xml',//这里可以不写，但千万别写text或者html!!!
+                success: function (xml) {
+                    $(xml).find('item').each(function (i, story) {
+                        // let docu = domParser.parseFromString(news.innerHTML,"text/xml");
+                        let title = pattern_title.exec(story.innerHTML)[1];
+                        // let author = pattern_author.exec(story.innerHTML)[1];
+                        // let time = pattern_time.exec(story.innerHTML)[1];
+                        // let content = pattern_content.exec(story.innerHTML)[1];
+                        let link = pattern_link.exec(story.innerHTML)[1];
+                        $('.cover-main').append('<h3><a href="' + link + '">' + `${title}</a></h3>`);
+                    });
+                },
+                error: function () {
+                    alert('RSS订阅失效');
+                }
+            });
+        });
+        //
+        // RSS_URL, {
+        //     dataType: 'application/json',
+        //     success: function (data) {
+        //         let parser = new DOMParser();
+        //         let xmlDOC = parser.parseFromString(data,'text/xml');
+        //         let gen = xmlDOC.getElementsByTagName("description")
+        //         alert(gen);
+        //         console.log('访问少数派RSS订阅成功！！！！' + data);
+        //     }
+        // }
+    </script>
+</div>
 </body>
+<style>
+    /*.cover-main {*/
+    /*    color: #26b9cd;*/
+    /*}*/
+</style>
 </html>
