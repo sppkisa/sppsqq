@@ -94,26 +94,26 @@
                                                                                         target="_blank">Get Started</a>`);
 
             $('.cover-main').append('<hr/><br/>');
-
-            $.ajax({
-                url: RSS_URL,
-                type: 'GET',
-                // dataType: 'xml',//这里可以不写，但千万别写text或者html!!!
-                success: function (xml) {
-                    $(xml).find('item').each(function (i, story) {
-                        // let docu = domParser.parseFromString(news.innerHTML,"text/xml");
-                        let title = pattern_title.exec(story.innerHTML)[1];
-                        // let author = pattern_author.exec(story.innerHTML)[1];
-                        // let time = pattern_time.exec(story.innerHTML)[1];
-                        // let content = pattern_content.exec(story.innerHTML)[1];
-                        let link = pattern_link.exec(story.innerHTML)[1];
-                        $('.cover-main').append('<h3><a href="' + link + '">' + `${title}</a></h3>`);
-                    });
-                },
-                error: function () {
-                    alert('RSS订阅失效');
-                }
-            });
+            $('.cover-main').append('<iframe frameborder="0" scrolling="no" src="index2.html" width="100%" height="500px"></iframe>')
+            // $.ajax({
+            //     url: RSS_URL,
+            //     type: 'GET',
+            //     // dataType: 'xml',//这里可以不写，但千万别写text或者html!!!
+            //     success: function (xml) {
+            //         $(xml).find('item').each(function (i, story) {
+            //             // let docu = domParser.parseFromString(news.innerHTML,"text/xml");
+            //             let title = pattern_title.exec(story.innerHTML)[1];
+            //             // let author = pattern_author.exec(story.innerHTML)[1];
+            //             // let time = pattern_time.exec(story.innerHTML)[1];
+            //             // let content = pattern_content.exec(story.innerHTML)[1];
+            //             let link = pattern_link.exec(story.innerHTML)[1];
+            //             $('.cover-main').append('<h3><a href="' + link + '">' + `${title}</a></h3>`);
+            //         });
+            //     },
+            //     error: function () {
+            //         alert('RSS订阅失效');
+            //     }
+            // });
         });
         //
         // RSS_URL, {
