@@ -81,7 +81,3 @@
 - 附加技能
 
   - [TCP/IP 协议](java/soft-skills/TCP-IP.md)
-  - [一个学渣的阿里之路](java/soft-skills/Interview-experience.md)
-  - [如何成为一位「不那么差」的程序员](java/soft-skills/how-to-be-developer.md)
-  - [如何高效的使用 Git](java/soft-skills/how-to-use-git-efficiently.md)
-  
