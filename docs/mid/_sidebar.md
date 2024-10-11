@@ -1,4 +1,4 @@
 - vue
 
-  - [computed/watch](/web/computed.md)
+  - [computed/watch](/mid/computed.md)
 
