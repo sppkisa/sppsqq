@@ -1,4 +1,5 @@
 -   [开发规范](/java/)
 -   [常见算法](/algorithm/)
 -   [web前端](/web/)
--   [中台](/mid)
+-   [中台](/mid/)
+-   [linux](/linux/)

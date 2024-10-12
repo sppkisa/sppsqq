@@ -1,4 +1,4 @@
-- vue
+- 中台
 
-  - [computed/watch](/mid/computed.md)
+  - [kubernetes](/mid/computed.md)
 
